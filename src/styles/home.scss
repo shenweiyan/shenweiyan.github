@@ -9,6 +9,12 @@
       margin: 0 auto;
     }
 
+    @media screen and (max-width: 768px) {
+        .author-info {
+            float: none;
+	    width: auto;
+	}
+    }	
     .author-info {
       margin-bottom: 3px;
       float: right;
