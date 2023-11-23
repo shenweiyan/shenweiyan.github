@@ -51,7 +51,7 @@
     "sass": "^1.49.9",
     "slugify": "^1.6.5",
     "webpack-filter-warnings-plugin": "^1.2.1",
-    "gatsby-transformer-remark": "*",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-remark-mathjax": "*"
   },
   "devDependencies": {
